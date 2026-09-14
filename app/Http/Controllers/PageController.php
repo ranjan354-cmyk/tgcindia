@@ -1,0 +1,1115 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Blog;
+use App\Models\BlogCategory;
+use App\Models\Brochure;
+use App\Models\CourseCategory;
+use App\Models\Course;
+use App\Models\Course\Batch;
+//use App\Models\Faq;
+use App\Models\Opening;
+use App\Models\Partner;
+use App\Models\Placement;
+use App\Models\Press;
+use App\Models\Events;
+use App\Models\Reviews;
+use App\Models\Course\Testimonial;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+//use App\Models\Course\Faq;
+///use App\Models\Faq;
+
+use App\Models\Course\Faq as CourseFaq;
+use App\Models\Faq as GlobalFaq;
+
+
+use App\Models\Slider;
+
+
+
+use App\Models\Course\Certificate;
+use App\Models\Course\CourseProject;
+use App\Models\Course\Enroll;
+
+use App\Models\Course\Solution;
+use App\Models\Course\Syllabus;
+
+use App\Models\Course\Training;
+use Illuminate\Support\Facades\Cache;
+
+
+class PageController extends Controller{
+    public function about_us(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "About Us | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.about',compact('data'));
+    }
+
+    public function culture(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Culture | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.culture',compact('data'));
+    }
+
+    public function why_tgc(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Why TGC | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.why_tgc',compact('data'));
+    }
+
+     public function getsyllabuspdf(Request $request,$id){
+      
+    $getSyllabus = DB::table('tbl_course_syllabus')
+    ->where('course_id', $id)
+    ->where('parent', 0)
+    ->orderBy('orders_by', 'ASC')
+    ->get();
+
+$getSyllabusValuedata = array();
+
+foreach ($getSyllabus as $getSyllabusValue) {
+    // Fetch children of the current syllabus item (not all with parent = 0)
+    $getSyllabusParent = DB::table('tbl_course_syllabus')
+        
+        ->where('parent', $getSyllabusValue->id)
+        ->orderBy('orders_by', 'ASC')
+        ->get();
+
+    foreach ($getSyllabusParent as $getSyllabusParentValue) {
+        // Grouping children by type under the parent's name
+        $getSyllabusValuedata[$getSyllabusValue->name][$getSyllabusParentValue->type][] = $getSyllabusParentValue->name;
+    }
+}
+$courses=DB::table('tbl_course')->where('id', $id)->first();
+$data['projects']=DB::table('tbl_course_project')->where('course_id', $id)->get();
+$data['solutions']=DB::table('tbl_course_solution')->where('course_id', $id)->get();
+$data['certificate']=DB::table('tbl_course_certificate')->where('course_id', $id)->get();
+ return view('frontend.pages.syllabus',compact('getSyllabusValuedata','courses','data'));
+//echo "<pre>";
+//print_r($getSyllabusValuedata);
+///echo "</pre>";
+
+       
+     }
+
+    public function faculty(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Faculty | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.faculty',compact('data'));
+    }
+   public function thankslocation()
+      {
+            $data['menu'] = "";
+            $data['sub_menu'] = "";
+            $data['meta_title'] = "Home | TGC India";
+            $data['meta_keywords'] = "";
+            $data['meta_description'] = "";
+            $data['cat_show'] = 0;
+
+           return view('frontend.thanks', compact('data'));
+      }
+
+
+    public function facilites(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Facilites | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.facilites',compact('data'));
+    }
+
+    public function join_us(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Join Us | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.join_us',compact('data'));
+    }
+
+    public function careers(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Careers | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['opening'] = Opening::WHERE('is_deleted', '0')
+            ->orderBy('id', 'DESC')
+            ->paginate(25);
+
+      return view('frontend.pages.careers',compact('data'));
+    }
+
+    public function privacy_policy(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Privacy Policy | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.privacy_policy',compact('data'));
+    }
+
+    public function terms_conditions(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Terms and Conditions | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.terms_conditions',compact('data'));
+    }
+    
+    
+    public function galleryData(Request $request){
+           $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Gallery | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+      $data['cat']=DB::table('tbl_festival')->get();
+      
+      foreach($data['cat'] as $catvalue){
+       $catTitle[$catvalue->id]= $catvalue->title;
+          
+      }
+      
+      if($request->get('cate')!=''){
+          $data['gallery']=DB::table('tbl_gallery')->where('cate_id', $request->get('cate'))->orderBy('order_by', 'ASC')->get();
+      }else{
+      
+      $data['gallery']=DB::table('tbl_gallery')->orderBy('order_by', 'ASC')->get();
+      }
+      
+      
+        
+         return view('frontend.pages.gallery',compact('data','catTitle'));
+        
+    }
+
+    public function contact_us(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Contact TGC India South Delhi | Address, Phone, Timings";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "Visit TGC India in South Delhi. Get address, phone number, timings, and course enquiry details for Graphic Design, Animation, VFX, UI UX, Web Development, Digital Marketing, and more.";
+      $data['cat_show'] = 0;
+      
+   //   $num1 = rand(1, 10);
+  //  $num2 = rand(1, 10);
+
+  //  session(['captcha_sum' => $num1 + $num2]);
+
+      return view('frontend.pages.contact_us',compact('data'));
+    }
+    
+    public function south_delhi_center(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "TGC India South Delhi Center | Address, Phone, Timings";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "Visit TGC India South Delhi center. Get address, phone number, timings, course enquiry details, and connect with our training institute in South Delhi.";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.south_delhi_center',compact('data'));
+    }
+
+    public function east_delhi_center(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "TGC India East Delhi Center | Address, Phone, Timings";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "Visit TGC India East Delhi center. Get address, phone number, timings, course enquiry details, and connect with our training institute in East Delhi.";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.east_delhi_center',compact('data'));
+    }
+
+    public function student_placement(){
+     $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Student Placement | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+      $data['opening'] = DB::table("tbl_student_career")->where('is_deleted', '0')
+            ->orderBy('id', 'DESC')
+            ->paginate(25);
+       return view('frontend.pages.student-hiring',compact('data'));
+    }
+    /*
+      public function Seolocation(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Our Location | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+      
+      $sqlCity=DB::table('tbl_city')->get();
+      $locationCity=array();
+      foreach($sqlCity as $sqlCityValue){
+          $sqlLocation=DB::table('tbl_location')->where('city_id',$sqlCityValue->id)->get();
+          foreach($sqlLocation as $sqlLocationvalue){
+          
+          $locationCity[$sqlCityValue->city][]= $sqlLocationvalue->slug;
+          
+          }
+          
+      }
+    //  echo "<pre>";
+     //   print_r($locationCity);
+     //    echo "</pre>";
+      //  die;
+$CityLocation = DB::table('tbl_location')->whereNull('city_id')->get();
+
+      $courseNotInCity=DB::select("SELECT course_id FROM `tbl_check_city`");
+      foreach($courseNotInCity as $cityValue){
+          $cityArray[]=$cityValue->course_id;
+          
+      }
+     // print_r($cityArray);
+$excludedCourseIds=$cityArray;
+      
+      $excludedCourses = DB::table('tbl_course')
+    ->where('staus', 'Active')
+    ->whereIn('id', $excludedCourseIds)
+    ->where('is_deleted', '0')
+   
+    ->orderBy('orders_by', 'asc')
+   
+    ->get();
+      
+      
+      return view('frontend.pages.location',compact('data','locationCity','excludedCourses','CityLocation'));
+    }
+    
+    */
+    
+    public function Seolocation()
+{
+    $data = [];
+    $data['menu'] = "";
+    $data['sub_menu'] = "";
+    $data['meta_title'] = "Our Location | TGC India";
+    $data['meta_keywords'] = "";
+    $data['meta_description'] = "";
+    $data['cat_show'] = 0;
+
+    /*
+    |--------------------------------------------------------------------------
+    |  Load & Cache City + Location (Single Query Only)
+    |--------------------------------------------------------------------------
+    */
+
+    $locationCity = Cache::remember('footer_locations', 3600, function () {
+
+        return DB::table('tbl_location')
+            ->join('tbl_city', 'tbl_city.id', '=', 'tbl_location.city_id')
+            ->select('tbl_city.city', 'tbl_location.slug')
+            ->get()
+            ->groupBy('city')
+            ->map(function ($items) {
+                return $items->pluck('slug')->toArray();
+            })
+            ->toArray();
+    });
+
+    /*
+    |--------------------------------------------------------------------------
+    | Locations Without City
+    |--------------------------------------------------------------------------
+    */
+
+    $CityLocation = Cache::remember('cityless_locations', 3600, function () {
+        return DB::table('tbl_location')
+            ->whereNull('city_id')
+            ->get();
+    });
+
+    /*
+    |--------------------------------------------------------------------------
+    |  Courses Not In City (Safe Version)
+    |--------------------------------------------------------------------------
+    */
+
+    $excludedCourseIds = Cache::remember('excluded_course_ids', 3600, function () {
+        return DB::table('tbl_check_city')
+            ->pluck('course_id')
+            ->toArray();
+    });
+
+    /*
+    |--------------------------------------------------------------------------
+    |  Excluded Courses List
+    |--------------------------------------------------------------------------
+    */
+
+    $excludedCourses = [];
+
+    if (!empty($excludedCourseIds)) {
+
+        $excludedCourses = Cache::remember('excluded_courses', 3600, function () use ($excludedCourseIds) {
+
+            return DB::table('tbl_course')
+                ->where('staus', 'Active')
+                ->where('excluded_by', 1)
+                ->where('is_deleted', '0')
+                ->orderBy('orders_by', 'asc')
+                ->get();
+        });
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    |  Return View
+    |--------------------------------------------------------------------------
+    */
+
+    return view('frontend.pages.location', compact(
+        'data',
+        'locationCity',
+        'excludedCourses',
+        'CityLocation'
+    ));
+}
+    
+    
+    public function locationDetails(Request $request,$url){
+   
+      if($url){
+      $title=   ucwords(str_replace('-', ' ', $url));
+      // $getcourseSql=DB::table('tbl_location')->where('slug', $url)->first();
+       $getcourseSql = DB::selectOne("SELECT * FROM tbl_location WHERE slug LIKE '%".$url."%'");
+       //print_r($getcourseSql);
+       //die;
+       
+       if($getcourseSql){
+        $course_id=$getcourseSql->course_id;
+       
+       
+       $city_id=$getcourseSql->city_id;
+       $getCourseSlug=DB::table('tbl_course')->where('id',$course_id)->first();
+       if($getCourseSlug){
+       $slug=$getCourseSlug->slug;
+      
+       if($slug){
+       
+       $citySql=DB::table('tbl_city')->where('id',$city_id)->first();
+       $cityName=($citySql->city)??'N/A';
+       
+      /// $Title = ucwords(str_replace('-', ' ', 'online-course-in-adv-certification-course-in-autocad'));
+// Result: 'Online Course In Adv Certification Course In Autocad'
+
+      // die;
+        $data['menu'] = "";
+      $data['sub_menu'] = "";
+      $data['cat_show'] = 0;
+
+   ///  echo $slug;
+      //die;
+
+      $courses = Course::where('slug', $slug)->first();
+      
+   
+
+      $data['meta_title'] = $title."| TGC INDIA";
+      $data['meta_keywords'] = $courses->meta_keywords .",".$title ;
+      $data['meta_description'] = $courses->meta_description.",".$title;
+
+
+      $data['cat_name'] = CourseCategory::where('id', $courses->parent)->first();
+      
+      
+      
+      $data['course_batch'] = Batch::where('course_id', $courses->id)->orderBy('start_date', 'ASC')->get(); 
+      
+      $data['course_enroll'] = Enroll::where('course_id', $courses->id)->orderBy('id', 'DESC')->get();
+      $data['course_training'] = Training::where('course_id', $courses->id)->orderBy('id', 'DESC')->get();
+      $data['course_solution'] = Solution::where('course_id', $courses->id)->orderBy('id', 'DESC')->get();
+      $data['course_certificate'] = Certificate::where('course_id', $courses->id)->orderBy('id', 'DESC')->get();
+  $data['course_syllabus'] = Syllabus::where('course_id', $courses->id)
+    ->where('parent', 0)
+    ->get();
+
+ //  print_r($data);
+     // die;
+
+      
+    
+    $data['course_faq'] = CourseFaq::where('course_id', $courses->id)
+                            ->whereRaw("FIND_IN_SET('description', new_faq) > 0")
+                            ->orderBy('id', 'DESC')
+                            ->get();
+                            
+
+
+
+     $data['course_faq1'] = CourseFaq::where('course_id', $courses->id)->whereRaw("FIND_IN_SET('Certification', new_faq) > 0")->orderBy('id', 'DESC')->get();
+     $data['course_faq2'] = CourseFaq::where('course_id', $courses->id)->whereRaw("FIND_IN_SET('CertificationFAQs', new_faq) > 0")->orderBy('id', 'DESC')->get();
+
+      $data['course_testimonials'] = Testimonial::where('course_id', $courses->id)->orderBy('id', 'DESC')->get();
+     $data['recent_blogs'] = Blog::where('staus', 'Active')
+    ->where('is_deleted', '0')
+    ->orderBy('id', 'DESC')
+    ->limit(10)
+    ->get();
+      $data['course_project'] = CourseProject::where('course_id', $courses->id)->get();
+       $data1['course_project1'] = CourseProject::where('course_id', $courses->id)->first();
+
+      $data['category_course'] = Course::where('staus', 'Active')
+            ->WHERE('is_deleted', '0')
+            ->WHERE('parent', $courses->parent)
+            ->orderBy('id', 'DESC')
+            ->limit(10)
+            ->get();
+
+      $data['recent_course'] = Course::where('staus', 'Active')
+            ->WHERE('is_deleted', '0')
+            ->orderBy('id', 'DESC')
+            ->limit(10)
+            ->get();
+
+      $data['trending-course'] = Course::where('staus', 'Active')
+            ->WHERE('is_deleted', '0')
+            ->orderBy('id', 'DESC')
+            ->WHERE('course_category', 'trending')
+            ->limit(24)
+            ->get();
+
+      $certificate = DB::table('tbl_course_heading')
+            ->WHERE('course_id', $courses->id)
+            ->first();
+
+
+      return view('frontend.course.course_details_location',compact('data','data1', 'courses', 'certificate','cityName','title'));
+      
+       }else{
+           return redirect('/');
+       }
+       }
+      }else{
+           return redirect('/');
+      }
+      }
+    }
+
+    public function blogs(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Blogs | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['blog_category'] = BlogCategory::WHERE('staus', 'Active')->WHERE('is_deleted', '0')->orderBy('orders_by', 'ASC')->get();
+      $data['blogs'] = Blog::where('staus', 'Active')->WHERE('is_deleted', '0')->orderBy('id', 'DESC')->paginate(32);   
+    $data['popular_blogs'] = Blog::where('staus', 'Active') ->where('is_deleted', '0')->where('popular', 1)->orderBy('id', 'DESC') ->take(8)->get();
+
+      $data['popular_blogs_count'] = Blog::where('staus', 'Active')->WHERE('is_deleted', '0')->WHERE('popular', 1)->orderBy('id', 'DESC')->count();
+      $data['trending_courses'] = DB::table('tbl_course')->where('is_deleted', '0')->where('staus', 'Active')->where('course_type', 'trending')->get();
+    //   $data['trending_courses'] = Course::WHERE('is_deleted', '0')->where('staus', 'Active')->WHERE('course_category', 'trending')->get();
+      return view('frontend.pages.blogs',compact('data'));
+    }
+
+
+    public function disclaimer(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Disclaimer | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.disclaimer',compact('data'));
+    }
+
+    public function intellectual_property(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Intellectual Property | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.intellectual_property',compact('data'));
+    }
+
+    public function product_services_details(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Product Services Details | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.product_services_details',compact('data'));
+    }
+
+    public function process_flow_to_purchase(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Process Flow To Purchase | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.process_flow_to_purchase',compact('data'));
+    }
+
+    public function refund_policy(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Refund Policy | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.refund_policy',compact('data'));
+    }
+
+
+    public function corporate_training(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Corporate Training | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['category'] = CourseCategory::WHERE('staus', 'Active')
+              ->WHERE('is_deleted', '0')
+              ->orderBy('orders_by', 'ASC')
+              ->get();
+
+      $data['partner'] = Partner::WHERE('is_deleted', '0')
+              ->orderBy('id', 'DESC')
+              ->get();
+              
+              
+      $data['faq'] = GlobalFaq::WHERE('is_deleted', '0')
+            ->WHERE('type', 'Corporate Training')
+            ->orderBy('id', 'DESC')
+            ->paginate(25);
+
+      return view('frontend.pages.it-corporate_training',compact('data'));
+    }
+
+
+    public function scholarship(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Scholarship | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['partner'] = Partner::WHERE('is_deleted', '0')
+              ->orderBy('id', 'DESC')
+              ->take(9)
+              ->get();
+
+      $data['placement'] = Placement::WHERE('is_deleted', '0')
+              ->orderBy('id', 'DESC')
+              ->take(10)
+              ->get();
+
+      return view('frontend.pages.scholarship',compact('data'));
+    }
+
+    public function placement(){
+
+    $data['menu'] = "";
+    $data['sub_menu'] = "";
+
+    $data['meta_title'] = "Placement | TGC India";
+    $data['meta_keywords'] = "";
+    $data['meta_description'] = "";
+    $data['cat_show'] = 0;
+
+   
+    $data['placement'] = Placement::WHERE('is_deleted', '0')
+          ->orderBy('id', 'DESC')
+          ->get();  
+
+  
+    $data['category'] = CourseCategory::WHERE('staus', 'Active')
+            ->WHERE('is_deleted', '0')
+            ->orderBy('orders_by', 'ASC')
+            ->get();
+
+    return view('frontend.pages.placement',compact('data'));
+}
+
+    public function press_release(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Press Release | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['press'] = Press::WHERE('is_deleted', '0')
+            ->orderBy('id', 'DESC')
+            ->paginate(25);
+
+      return view('frontend.pages.press_release',compact('data'))->with('i', (request()->input('page', 1) - 1) * 25);
+    }
+
+    public function press_release_details($slug){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Press Release Details | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['press'] = Press::WHERE('is_deleted', '0')
+            ->WHERE('slug', $slug)
+            ->first();
+
+      return view('frontend.pages.press_release_details',compact('data'));
+    }
+
+    public function frequently_asked_questions(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Frequently Asked Questions | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['faq'] = GlobalFaq::WHERE('is_deleted', '0')
+            ->WHERE('type', 'Faq Student')
+            ->orderBy('orders_by', 'ASC')
+            ->paginate(25);
+
+      return view('frontend.pages.frequently_asked_questions',compact('data'));
+    }
+
+    public function visa_assistance_international_students(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Visa Assistance International Students | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+
+      $data['faq'] = GlobalFaq::WHERE('is_deleted', '0')
+            ->WHERE('type', 'Visa Assistance')
+            ->orderBy('id', 'DESC')
+            ->paginate(25);
+
+      return view('frontend.pages.visa_assistance_international_students',compact('data'));
+    }
+
+    public function download_brochure(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Download Brochure | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['brochure'] = Brochure::WHERE('is_deleted', '0')
+            ->orderBy('id', 'DESC')
+            ->paginate(24);
+    $category=DB::table('tbl_course_category')->where('staus', 'Active')->where('is_deleted', 0)->get();        
+
+      return view('frontend.pages.download_brochure',compact('data','category'));
+    }
+
+    public function student_reviews(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Student Reviews | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['testimonial'] = Testimonial::select(
+                      'tbl_course.name as course_name',
+                      'tbl_course_testimonial.id',
+                      'tbl_course_testimonial.name',
+                      'tbl_course_testimonial.heading',
+                      'tbl_course_testimonial.description',
+                      'tbl_course_testimonial.image',
+                      'tbl_course_testimonial.video_link'
+                    )
+                    ->leftJoin('tbl_course', 'tbl_course.id', 'tbl_course_testimonial.course_id')
+                    ->WHERE('tbl_course_testimonial.video_link', '#')
+                    ->orderBy('tbl_course_testimonial.id', 'DESC')
+                    ->paginate(20);
+
+      $data['category'] = CourseCategory::WHERE('staus', 'Active')
+                    ->WHERE('is_deleted', '0')
+                    ->orderBy('orders_by', 'ASC')
+                    ->get();
+
+
+      return view('frontend.pages.student_reviews',compact('data'));
+    }
+
+    public function calendar_new_batches(Request $request){
+
+       $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Calendar New Batches | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['batch_date'] = Batch::select(
+              DB::raw('YEAR(start_date) as year'),
+              DB::raw('MONTH(start_date) as month'),
+              DB::raw('COUNT(*) as total_records')
+          )
+          ->groupBy(DB::raw('YEAR(start_date)'), DB::raw('MONTH(start_date)'))
+          ->orderByDesc('year')
+          ->orderByDesc('month')
+          ->WHERE('start_date', '>=', date('Y-m-d'))
+          ->get();
+          
+          $category=DB::table('tbl_course_category')->where('staus', 'Active')->where('is_deleted', 0)->get();
+          
+
+      return view('frontend.pages.calendar_new_batches',compact('data','category'));
+    }
+
+    public function upcoming_events(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Upcoming Events | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['events'] = Events::WHERE('is_deleted', '0')
+            ->orderBy('event_date', 'DESC')
+            ->paginate(24);
+
+      return view('frontend.pages.upcoming_events',compact('data'));
+    }
+
+    public function enroll_now(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Enroll Now | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+      //$courses=
+         
+         $courseNotInCity=DB::select("SELECT course_id FROM `tbl_check_city`");
+      foreach($courseNotInCity as $cityValue){
+          $cityArray[]=$cityValue->course_id;
+          
+      }
+      
+      $excludedCourseIds=$cityArray;
+    $courses = Course::where('staus', 'Active')
+            ->WHERE('is_deleted', '0')
+           ->whereNotIn('id', $excludedCourseIds)
+            ->orderBy('id', 'DESC')
+            
+            ->get();
+            
+            
+      return view('frontend.pages.enroll_now',compact('data','courses'));
+    }
+
+    public function enroll_now_for_new_batch($slug = null)
+    {
+
+    //  $slug1 = base64_decode($slug);
+      
+    //  $slug1 = explode("~", $slug1);
+     // $data['slug_name'] = $slug1[0];
+     /// $data['slug_date'] = $slug1[1];
+      
+      
+      $slug1 = base64_decode($slug);
+
+$slug1 = explode("~", $slug1);
+
+$data['slug_name'] = $slug1[0] ?? '';
+$data['slug_date'] = $slug1[1] ?? '';
+      
+    
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Enroll Now | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      return view('frontend.pages.enroll_now_for_new_batch',compact('data'));
+
+    }
+
+    public function industrial_training(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Industrial Training | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['faq'] = GlobalFaq::WHERE('is_deleted', '0')
+            ->WHERE('type', 'Industrial Training')
+            ->orderBy('id', 'DESC')
+            ->paginate(25);
+
+      return view('frontend.pages.industrial_training',compact('data'));
+    }
+
+    public function it_corporate_training_in_india(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "It Corporate Training in India | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['faq'] = GlobalFaq::WHERE('is_deleted', '0')
+            ->WHERE('type', 'Corporate Training')
+            ->orderBy('id', 'DESC')
+            ->paginate(25);
+
+      return view('frontend.pages.it_corporate_training_in_india',compact('data'));
+    }
+
+    public function trainer_application(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Trainer Application | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['category'] = CourseCategory::WHERE('staus', 'Active')
+                    ->WHERE('is_deleted', '0')
+                    ->orderBy('orders_by', 'ASC')
+                    ->get();
+
+      return view('frontend.pages.trainer_application',compact('data'));
+    }
+
+    public function become_an_instructor(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Become an Instructor | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+      
+        $excludedData=DB::table('tbl_check_city')->get();
+    
+    foreach($excludedData as $excludedDataValue){
+        $excludedDataAll[]=$excludedDataValue->course_id;
+    }
+      
+     $coursesdata = DB::table('tbl_course')
+    ->where('staus', 'Active')
+    ->where('is_deleted', 0)
+    ->whereNotIn('id', $excludedDataAll)
+    ->get();
+    //  print_r($courses);
+      //die;
+
+      return view('frontend.pages.become_an_instructor',compact('data','coursesdata'));
+    }
+
+    public function reviews(Request $request){
+
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Reviews | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $cat = request()->has('cat') ? request()->input('cat') : '';
+
+
+      $data['reviews'] = Reviews::WHERE('is_deleted', '0')
+            ->orderBy('id', 'DESC')
+            ->get();
+
+      $data['category'] = CourseCategory::WHERE('staus', 'Active')
+            ->WHERE('is_deleted', '0')
+            ->orderBy('orders_by', 'ASC')
+            ->get();
+
+      return view('frontend.pages.reviews',compact('data', 'cat'));
+    }
+
+   public function reviews_category(Request $request, $cat= null)
+    
+    {
+if($cat){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Reviews | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $cats = CourseCategory::WHERE('slug', $cat)->first();
+if ($cats) {
+      $data['catName'] = $cats->name;
+      
+      $data['reviews'] = Reviews::WHERE('is_deleted', '0')
+            ->WHERE('course_category', $cats->id)
+            ->orderBy('id', 'DESC')
+            ->paginate(30);
+
+      $data['category'] = CourseCategory::WHERE('staus', 'Active')
+            ->WHERE('is_deleted', '0')
+            ->orderBy('orders_by', 'ASC')
+            ->get();
+
+      return view('frontend.pages.reviews_category',compact('data', 'cat'));
+} else {
+    return redirect()->back();
+}
+
+}else{
+    return redirect()->back();
+}
+    }
+
+    public function our_clients(){
+
+      $data['menu'] = "";
+      $data['sub_menu'] = "";
+
+      $data['meta_title'] = "Our Clients | TGC India";
+      $data['meta_keywords'] = "";
+      $data['meta_description'] = "";
+      $data['cat_show'] = 0;
+
+      $data['partner'] = Partner::WHERE('is_deleted', '0')
+              ->orderBy('id', 'DESC')
+              ->get();
+
+      $data['placement'] = Placement::WHERE('is_deleted', '0')
+              ->orderBy('id', 'DESC')
+              ->paginate(10);
+
+      return view('frontend.pages.our_clients',compact('data'));
+    }
+
+  
+
+    
+}

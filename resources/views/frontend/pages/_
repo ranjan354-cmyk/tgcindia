@@ -1,0 +1,339 @@
+@extends('frontend.layouts.app')
+@section('content')
+
+
+<div class="main-content">
+
+
+	<section class="scholarshop-top">
+		<!--<div class="container">-->
+		<div class="row">
+			<!-- <div class="scholarship-top-item"> -->
+			<div class="col-md-6 scholarship-top-left">
+				<div class="">
+					<h4>Get <span>scholarship</span> for <br>every bright student</h4>
+					<p>Acquiring a scholarship will eventually uplift your academic and career objectives by diminishing any financial fence. Obtaining a scholarship will help your financial concerns. Thus, it will offer you more time to study, acquire knowledge and secure better marks.</p>
+					<div class="explore-courses">
+						<a href="{{url('courses.html')}}" class="showCategoryProgram">Explore Courses</a>
+					</div>
+
+					<!--<form action="">-->
+					<!--	<div class="scholarship-email-submit">-->
+					<!--		<input type="email" placeholder="Enter email address">-->
+					<!--		<button type="submit" name="submit">Submit</button>-->
+					<!--	</div>-->
+					<!--</form>-->
+				</div>
+				<img src="{{url('assets/front/')}}/img/scholarship-leftimg.webp" alt="scholarship-leftimg" class="scholarship-top-leftimg">
+			</div>
+			<div class="col-md-6">
+				<div class="scholarship-top-right">
+
+
+					<h5> <i class="fa fa-graduation-cap"></i> Scholarship</h5>
+
+
+
+					<div class="career-form-modal">
+
+						<div class="form-item">
+
+							<form action="" method="post" onsubmit="return homeController.saveApplyJob(this)" autocomplete="off" enctype="multipart/form-data">
+
+								<input type="hidden" name="from" value="Careers">
+								<input type="hidden" name="jobtitle" class="from_title" value="Apply as a Trainer">
+								<input type="hidden" name="type" class="type" value="Trainer">
+
+
+								<div class="row">
+
+									<div class="name">
+
+										<div class="col-2">
+
+											<p>Name*</p>
+
+										</div>
+
+										<div class="col-2">
+
+											<select name="title" id="">
+
+												<option value="Mr.">Mr.</option>
+
+												<option value="Mrs.">Mrs.</option>
+
+											</select>
+
+										</div>
+
+										<div class="col-8" style="padding-left:10px;">
+
+											<input type="text" placeholder="Name Here" name="name" maxlength="35">
+
+										</div>
+
+									</div>
+
+									<div class="name">
+
+										<div class="col-2">
+
+											<p>Email*</p>
+
+										</div>
+
+										<div class="col-10">
+
+											<input type="email" name="email" placeholder="Email Here...">
+
+										</div>
+
+									</div>
+
+
+
+									<div class="name">
+
+										<div class="col-2">
+
+											<p>Mobile*</p>
+
+										</div>
+
+										<div class="col-10">
+
+											<input type="tel" name="phone" onkeypress="return isNumberKey(event);" placeholder="Enter Your Mobile No.">
+
+										</div>
+
+									</div>
+
+
+
+
+
+									<div class="name">
+
+										<div class="col-4">
+
+											<p>Education*</p>
+
+										</div>
+
+										<div class="col-8">
+
+											<select id="" name="availability" style="width:100%">
+
+												<option selected="" disabled="" value="">Select Availability</option>
+
+												<option value="Full Time">Full Time</option>
+
+												<option value="Part Time">Part Time</option>
+
+											</select>
+
+										</div>
+
+									</div>
+
+
+
+									<div class="name">
+
+										<div class="col-4">
+
+											<p>College Name*</p>
+
+										</div>
+
+										<div class="col-8">
+
+											<input type="text" name="keyskills" placeholder="Enter College Name">
+
+										</div>
+
+									</div>
+
+
+
+									<div class="name">
+
+										<div class="col-4">
+
+											<p>Technology*</p>
+
+										</div>
+
+										<div class="col-8">
+
+											<select id="" name="availability" style="width:100%">
+
+												<option selected="" disabled="" value="">Select Availability</option>
+
+												<option value="Full Time">Full Time</option>
+
+												<option value="Part Time">Part Time</option>
+
+											</select>
+
+										</div>
+
+									</div>
+
+
+
+
+
+
+
+
+
+								</div>
+
+								<div class="submit-btn">
+
+									<button type="submit" name="submit" class="btn red">Submit</button>
+
+									<button type="button" class="btn grey" data-dismiss="modal">Cancel</button>
+
+								</div>
+
+							</form>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+		<!--</div>-->
+	</section>
+
+
+	<section class="scholarship-benifit">
+		<!--<img src="https://www.cromacampus.com/public/img/scholarship-leftimg.png" alt="scholarship-leftimg" class="scholarship-leftimg">-->
+		<div class="container">
+			<h2>The <span>Benefits</span> of Getting a Scholarship</h2>
+			<p>Presently, education has become one of the most important and costly assets. Most candidates look for financial help to pursue the career of their dreams that needs numerous years of education and counseling assistance. In such a scenario, Croma Campus helps them cover their financial aid.</p>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="scholarship-benifit-item default">
+						<img src="https://www.cromacampus.com/public/img/benifit-1.png" alt="benifit-1" width="59" height="59">
+						<h6>Gives you a Career Advantage</h6>
+						<p>Acquiring a scholarship will enhance your resume, and help you get your desired job.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="scholarship-benifit-item default2">
+						<img src="https://www.cromacampus.com/public/img/benifit-2.png" alt="benifit-2" width="59" height="59">
+						<h6>Saves you from Debt</h6>
+						<p>Obtaining a scholarship will eventually save you from taking education loans.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="scholarship-benifit-item default3">
+						<img src="https://www.cromacampus.com/public/img/benifit-3.png" alt="benifit-3" width="59" height="59">
+						<h6>Opportunity to earn education</h6>
+						<p>You choose your desired field as per your abilities.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="growwith-scholarship">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="growwith-scholarship-left">
+						<img src="https://www.cromacampus.com/public/img/scholarship-grow.webp" alt="scholarship-grow" width="450" height="254">
+					</div>
+				</div>
+				<div class="col-md-7">
+					<div class="growwith-scholarship-right">
+						<h4>Get the best scholarship assistance at Croma Campus</h4>
+						<p class="devider"></p>
+						<p>Croma Campus is one of the best educational institutions providing training, and scholarship assistance to candidates belonging from different backgrounds. Here, our team of experienced faculty members will guide you to choose the best university as per your abilities. They will give you effective suggestions to pass the scholarship criteria as well. By getting in touch with us, you will be able to save yourself from unnecessary debt, you will also get a chance to enhance your performance and build an effective resume.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="alumni">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="heading">
+						<h3>Where Our Alumni Work</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="firstsection">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="client">
+							<div class="clients-heading">
+								<strong>Our Corporate Clients</strong>
+							</div>
+							<div class="client-list-few">
+								@php foreach($data['partner'] as $rowC){ @endphp
+								<div class="client-logo">
+									<img src="{{url('public/uploads/'.$rowC->image)}}" alt="{{$rowC->name}}" width="96" height="60">
+								</div>
+								@php } @endphp
+							</div>
+							<div class="practice-test">
+								<button class="button2">
+									<a href="{{url('our-clients.html')}}">View All Clients</a>
+									<i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="testimonials">
+							<div class="testimonials-list">
+								<div class="owl-carousel owl-theme test-slide-jobs">
+									@php foreach($data['placement'] as $rowP){ @endphp
+									<div class="item test-slide">
+										<div class="test-img">
+											<img src="{{url('public/uploads/'.$rowP->image)}}" alt="{{$rowP->name}}" width="140" height="140">
+										</div>
+										<div class="test-name">
+											<strong>{{$rowP->name}}</strong>
+											<p>{{$rowP->course_name}}</p>
+										</div>
+										<div class="company-name">
+											<strong>{{$rowP->student_from}}</strong>
+											<p>{{$rowP->student_to}}</p>
+										</div>
+									</div>
+									@php } @endphp
+
+
+								</div>
+							</div>
+							<div class="practice-test">
+								<button class="button2">
+									<a href="{{url('placement.html')}}">View All Placements <i class="fa fa-arrow-right" aria-hidden="true"></i>
+									</a>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+@endsection

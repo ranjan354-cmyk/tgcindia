@@ -1,0 +1,1257 @@
+
+
+<style>
+
+
+ @media (min-width: 992px) {
+    .notif {
+        margin-left: 55px !important;
+    }
+}
+footer.footer02 .add_more .add h3 {
+        margin-bottom: 0px !important;
+}
+    
+</style>
+<footer class="footer02 ppd_cont">
+
+<div class="container-fluid">
+
+<div class="row">
+
+<div class="col-sm-6  col-md-6 col-md-3 col-lg-3">
+
+<div class="widget about-widget">
+
+<div class="widget-title" style="dispaly:flex;">
+<!--- <img src="{{ url('assets/front/') }}/img/logo.gif" alt="TGC India" loading="lazy" style="height: 75px;"> --->
+<img src="{{ url('assets/front/') }}/img/logo-new-logo.png" alt="TGC India" loading="lazy">
+
+</div>
+
+<div class="widget-content">
+
+
+<ul class="list-unstyled">
+
+<li><a href="mailto:info@tgcindia.com" style="color:#fff;"><i class="fa fa-envelope"></i> info@tgcindia.com</a></li>
+
+<li><a href="tel:18001020418" style="color:#fff;" class="clr"><i class="fa fa-phone"></i> 18001020418 (TOLLFREE)</a></li>
+<li><a href="tel:+91 9582786407" style="color:#fff;" class="clr"><i class="fa fa-phone"></i> +91 9582786406, 9582786407</a></li>
+<li ><i class="fa fa-map-marker" class="clr"></i>Head office- H-85A, 2nd Floor, South Extension, Part-I, New Delhi-110049 (India)</li>
+<li><i class="fa fa-map-marker" class="clr"></i>Branches- <a href="https://www.tgceastdelhi.com/" style="color:#fff;" target="_blank">Preetvihar</a> | <a href="https://tgcfaridabad.com/" target="_blank"  style="color:#fff;">Faridabad</a> | <a href="https://www.tgcjaipur.com/" target="_blank" style="color:#fff;">Jaipur</a> | <a href="https://tgcdehradun.com/" target="_blank" style="color:#fff;">Dehradun</a> </li>
+
+</ul>
+
+</div>
+
+</div><!-- ends: .widget -->
+
+
+
+</div><!-- ends: .col-sm-3 -->
+
+
+
+<div class="col-sm-6 col-md-6 col-md-2 col-lg-2">
+
+<div class="widget links">
+
+<div class="widget-title">
+
+<h2>Useful Links</h2>
+
+</div>
+
+<div class="widget-content">
+
+<ul class="list-unstyled d_links">
+
+<li><a href="{{url('/')}}"> Home</a></li>
+
+<!-- <li><a href="{{url('courses.html')}}"> Courses</a></li>-->
+
+<li><a href="{{ url('about-us') }}"> About Us</a></li>
+
+<li><a href="{{url('press-release')}}"> Press Release</a></li>
+
+<li><a href="{{ url('reviews') }}"> Reviews</a></li>
+
+<li><a href="{{ url('become-an-instructor.html') }}"> Become an Instructor</a></li>
+
+<li><a href="{{ url('trainer-application.html') }}"> Trainer Application</a></li>
+
+<!--<li><a href="{{ url('it-corporate-trainings-in-india.html') }}"> Corporate @TGC</a></li>-->
+
+ <li><a href="{{ url('industrial-training.html') }}">  Industrial  Training</a></li>
+
+<li><a href="{{ url('enroll-now.html') }}"> Enroll Now</a></li>
+
+<li><a href="{{ url('upcoming-events.html') }}"> Special Workshop</a></li>
+
+<li><a href="{{ url('calendar-new-batches.html') }}"> TGC Course Calendar</a></li>
+
+<li><a href="{{ url('student-reviews.html') }}"> Student Reviews</a></li>
+
+<li><a href="{{ url('careers.html') }}"> Career@TGC</a></li>
+
+<li><a href="{{ url('download-brochure.html') }}"> Download Brochure</a></li>
+
+<li><a href="{{ url('visa-assistance-international-students.html') }}"> Visa Assistance</a></li>
+
+<li><a href="{{ url('frequently-asked-questions.html') }}"> FAQ</a></li>
+
+<!--<li><a href="{{ url('press-release.html') }}"> Tgc in News</a></li>-->
+
+<li><a href="{{ url('placement.html') }}"> Placement</a></li>
+
+<li><a href="{{ url('scholarship.html') }}"> Scholarship</a></li>
+
+<li><a href="{{ url('it-corporate-training.html') }}"> Corporate Training</a></li>
+
+<li><a href="{{ url('contact-us') }}"> Contact Us</a></li>
+<li><a href="{{ url('gallery') }}"> Gallery</a></li>
+<li><a href="{{ url('location') }}"> Location</a></li>
+<li><a href="{{ url('franchise-opportunities-in-india') }}"> Franchise</a></li>
+</ul>
+
+</div>
+
+</div>
+
+</div><!-- ends: .col-sm-3 -->
+
+
+
+<div class="col-sm-12 col-md-6 col-md-4 col-lg-4">
+
+<div class="widget links">
+
+<div class="widget-title">
+
+<h2> Address</h2>
+
+</div>
+
+
+
+<div class="add_more">
+
+
+<div class="add">
+<div class="add_f">
+
+<h3>South Delhi Centre:</h3>
+
+<p>H-85A, 2nd Floor,
+
+South Extension, Part-I,
+
+New Delhi-110049 (India)</p>
+
+<p>Toll Free No.: 18001020418</p>
+
+</div>
+<div class="add_map">
+
+<div class="google-map">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14016.018704247468!2d77.2213206!3d28.5696223!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3f4be7ebd19%3A0x5749107e44b8a901!2sTGC%20India%20%7C%20Web%20Design%20Course%20%7C%20Animation%20Course%20%7C%20Delhi!5e0!3m2!1sen!2sin!4v1702468742598!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Delhi"></iframe>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="add">
+<div class="add_f">
+
+<h3>East Delhi Centre:</h3>
+
+<p>TGC, E-359, 1st Floor, Vikas Marg, Nirman Vihar,  Delhi-110092
+</p>
+
+<p>Toll Free No.: 18001020418</p>
+</div>
+<div class="add_map">
+<div class="google-map">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14016.018704247468!2d77.2213206!3d28.5696223!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3f4be7ebd19%3A0x5749107e44b8a901!2sTGC%20India%20%7C%20Web%20Design%20Course%20%7C%20Animation%20Course%20%7C%20Delhi!5e0!3m2!1sen!2sin!4v1702468742598!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Nirman Bihar Delhi"></iframe>
+</div>
+</div>
+</div>
+
+<div class="add">
+<div class="add_f">
+
+<h3>Faridabad Centre:</h3>
+
+<p>SCF 43, 2nd Floor, HUDA Market
+Part-2, Sector 19, Near Sanjha
+Chulha Restaurant (Nearest Metro Station - Badkal Mor)
+Faridabad- 121002</p>
+
+<p>Call.: 9643642030</p>
+</div>
+
+<div class="add_map">
+<div class="google-map">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224612.2390232577!2d77.15426347009468!3d28.402166472230633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdd01b85990d7%3A0x9c9123e5b1a00e7a!2sTGC%20Faridabad%20%7C%20Graphic%20Design%2C%20Web%20Design%2C%20Video%20Editing%20Course%20in%20faridabad.!5e0!3m2!1sen!2sin!4v1756472632803!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Faridabad"></iframe>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="add">
+<div class="add_f">
+<h3>Jaipur Centre:</h3>
+
+<p>D-32, 2nd floor,
+
+Near Gaurav Tower, Malviya Nagar,
+
+Jaipur- 302017, Rajasthan</p>
+
+<p>Call.: 7568872928</p>
+
+<!--br>
+
+<p>You can also Whatsapp at or give a call at “95827 86406” for more details Photo Gallery</p>-->
+</div>
+<div class="add_map">
+<div class="google-map">
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.549980891358!2d75.80646287543746!3d26.85426217668211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a27af00c0062751%3A0xd4aca4916c0f8dda!2sTgc%20Animation%20And%20Multimedia%20%7C%20Graphic%20design%20Course%20%7C%20Web%20Design%20Course%20%7C%20Video%20Editing!5e0!3m2!1sen!2sin!4v1756472540732!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Jaipur"></iframe>
+</div>
+</div>
+
+</div>
+
+
+
+<div class="add">
+<div class="add_f">
+<h3>Dehradun Centre:</h3>
+
+<p>
+ 2nd Floor, Sajwan High Rise, GMS Road, <br>Near: Kamla Palace, Dehradun- 248001</p>
+
+<p>Call.:  9410101902</p>
+
+<!--br>
+
+<p>You can also Whatsapp at or give a call at “95827 86406” for more details Photo Gallery</p>-->
+</div>
+<div class="add_map">
+<div class="google-map">
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220445.88461473322!2d77.70216659453126!3d30.309233299999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa7d4d4010bfab71%3A0xaa68e68204015d48!2sTGC%20Dehradun%20%7C%20Graphic%20Design%20Course%20in%20Dehradun%20%7C%20Web%20Design%20Course%20%7C%20Animation%20Course!5e0!3m2!1sen!2sin!4v1756101157998!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dehradun"></iframe>
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div><!-- ends: .col-sm-3 -->
+
+
+
+<div class="col-sm-12 col-md-6 col-md-3 col-lg-3">
+
+<div class="widget subscribe">
+
+<div class="widget-title">
+
+<h2>Get In Touch</h2>
+
+</div>
+
+<div class="widget-content">
+
+<p>Enter your email address for our mailing list to keep yourself updated.</p>
+
+@if(session('success3'))
+<div class="alert alert-success">
+{{ session('success3') }}
+</div>
+@endif
+
+@if(session('error'))
+<div class="alert alert-danger">
+{{ session('error') }}
+</div>
+@endif
+<form action="{{url('/homeGetintouch')}}" method="post" autocomplete="off">
+@csrf
+<input type="hidden" name="recaptcha_token" class="recaptcha_token">
+
+<div style="display: none;">
+    <input type="text" name="website" autocomplete="off">
+</div>
+
+<input type="hidden" name="form_start" value="{{ now()->timestamp }}">
+<!-- Add the hidden field -->
+<input type="hidden" name="form_type" value="get_in_touch">
+<input type="hidden" name="form_footer_url" value="{{$url = request()->url()}}">
+<input type="text" name="get_in_touch_name" value="{{ old('get_in_touch_name') }}" placeholder="Enter Name" maxlength="35">
+@error('get_in_touch_name')<p>{{ $message }}</p>@enderror
+
+<div class="valide-text">
+
+
+<input type="tel" name="get_in_touch_phone" value="{{ old('get_in_touch_phone') }}" maxlength="16" onkeypress="return isNumberKey(event);" placeholder="Enter Mobile Number ">
+@error('get_in_touch_phone')<p>{{ $message }}</p>@enderror
+
+</div>
+<input type="email" name="get_in_touch_email" value="{{ old('get_in_touch_email') }}" placeholder="E-mail Address">
+@error('get_in_touch_email')<p>{{ $message }}</p>@enderror
+
+<button type="submit" class="modal-placement-button popbtn" name="submit" title="when button disabled then please enter value">Submit</button>
+</form>
+
+</div>
+
+</div>
+
+
+</div><!-- ends: .col-sm-3 -->
+
+</div>
+
+</div>
+
+<!-- Footer Bottom -->
+
+
+</footer>
+
+<!----
+<div class="footer-middle-d pt-2 pb-2 ppd_cont">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div class="heading pt-2 pb-2">
+<h3 class="text-white">Latest Blog</h3>
+</div>
+</div>
+</div>
+<div class="row">
+
+
+              @php
+                  $results = DB::table('tbl_blog')->where('is_deleted', 0)
+                  ->orderBy('id', 'DESC')
+                  ->take(2)->get();
+                  foreach($results as $row){
+                  @endphp
+                  
+                  
+                   
+
+<div class="col-md-6">
+<div class="blog-list">
+<div class="blg_img">
+<img src="{{url('public/uploads/'.$row->image)}}" alt="{{$row->image_alt}}" >
+</div>
+<div class="blog-heading">
+<p>
+  {{($row->name)}}
+</p>
+          
+<a href="{{  url('blog-details/'.$row->slug)}}" target="_blank"> read More...</a>
+</div>
+</div>
+</div>
+ @php } @endphp
+
+</div> 
+<div class="row">
+<div class="col-md-12"><a href="blogs.html" class="more-blog">More blogs <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+</div>
+</div>
+</div>  ---->
+
+
+
+
+<div class="footer_social_newsletter ppd_cont">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div class="footer-social">
+<div class="follow-social">
+<div class="foo-bot-heading foo-first-follow">
+<h3>Follow Us</h3>
+</div>
+<div class="social-link">
+<a href="https://www.facebook.com/tgcin" target="_blank" aria-label="TGC India" ><i class="fa fa-facebook" style="background: #3A5999" aria-hidden="true" ></i></a>
+
+<a href="#" target="_blank" aria-label="TGC India"> <i class="fa fa-instagram" style="background: #8034B0" aria-hidden="true"></i></a>
+
+<a href="https://x.com/tgcindia" target="_blank" aria-label="TGC India"><i class="fa fa-twitter" style="background: #FE0000" aria-hidden="true"></i></a>
+
+<a href="https://www.linkedin.com/in/tgcdelhi?originalSubdomain=in" target="_blank" aria-label="TGC India"><i class="fa fa-linkedin" style="background: #0D75A8" aria-hidden="true"></i></a>
+
+<a href="#" target="_blank" aria-label="TGC India"><i class="fa fa-pinterest" style="background: #E50122" aria-hidden="true"></i></a>
+
+<a href="https://www.youtube.com/tgcanimation" target="_blank" aria-label="TGC India"><i class="fa fa-youtube" style="background: #FF0000;" aria-hidden="true"></i></a>
+
+</div>
+</div>
+<!---
+<div class="news">
+<div class="foo-bot-heading">
+<h3>For Newsletter</h3>
+</div>
+<div class="newsletter">
+<form action="" method="post" class="newsletter-form" onsubmit="return homeController.saveNewsLetter(this)">
+<input type="hidden" name="url" value="">
+<input type="hidden" name="device" value="Desktop">
+<input type="text" name="email" placeholder="Enter email">
+<input type="reset" class="resetform">
+<button type="submit" name="submit">
+<img src="{{ url('assets/front/') }}/img/send.png" alt="send" width="20" height="20" loading="lazy">
+</button>
+</form>
+</div>
+</div>
+ ----->
+
+<div class="notif">
+<div class="foo-bot-heading">
+<h3>For Notifications</h3>
+</div>
+<div class="notifications">
+<form action="{{url('/sendDemoNotification')}}" method="post" class="notifications-form" >
+    @csrf
+    <input type="hidden" name="recaptcha_token" class="recaptcha_token">
+
+    <div style="display: none;">
+    <input type="text" name="website" autocomplete="off">
+</div>
+
+<input type="hidden" name="form_start" value="{{ now()->timestamp }}">
+<input type="hidden" name="url" value="{{$url = request()->url()}}">
+<input type="hidden" name="device" value="Desktop">
+<input type="text" name="phone" maxlength="16" onkeypress="return isNumberKey(event);" placeholder="Enter Phone no">
+<input type="reset" class="resetform">
+<button type="submit">
+<img src="{{ url('assets/front/') }}/img/send.png" width="20" height="20" alt="send" loading="lazy"></button>
+</form>
+</div>
+</div>
+<div class="notpay">
+<div class="foo-bot-heading">
+<h3>We Accept Online Payments</h3>
+</div><a href="#" target="_blank">
+<div class="online-payment">
+<div class="onlpay"><img src="{{ url('assets/front/') }}/img/pay/pe.png" alt="pe" width="27" height="27" loading="lazy"></div>
+<div class="onlpay"><img src="{{ url('assets/front/') }}/img/pay/gpay.png" alt="gpay" width="30" height="30" loading="lazy"></div>
+<div class="onlpay"><img src="{{ url('assets/front/') }}/img/pay/paytm.png" width="57" height="18" alt="paytm" loading="lazy"></div>
+<div class="onlpay"><img src="{{ url('assets/front/') }}/img/pay/visa.png" width="51" height="17" alt="visa" loading="lazy"></div>
+<div class="onlpay"><img src="{{ url('assets/front/') }}/img/pay/ami.png" alt="ami" width="42" height="21" loading="lazy"></div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="" style="text-align:center;">
+<p style="color:#fff;font-size: 13px;">An ISO 9001:2015 Certified Company</p>
+</div>
+</div>
+</div>
+</div>              
+</div>
+
+
+
+
+
+
+
+
+<div class="footer-bottom footer-bottom02">
+
+<div class="container">
+
+<div class="footer-bottom-inner">
+
+<div class="row">
+
+
+
+<div class="col-md-12 col-sm-12">
+
+<div class="list-unstyled footer-menu" style="text-align: center;font-size: 12px;">
+
+<li><a href="{{ url('terms-conditions.html') }}">Terms & Conditions </a> 
+| <a href="{{ url('disclaimer.html') }}">Disclaimer </a> 
+| <a href="{{ url('intellectual-property.html') }}">Intellectual Property </a>
+| <a href="{{ url('course-fee.html') }}">Pricing </a> |
+<a href="{{ url('process-flow.html') }}">Process Flow </a>| 
+<a href="{{ url('refund-policy.html') }}">Refund Policy </a> |
+<a href="{{ url('privacy-policy.html') }}">Privacy Policy</a>
+
+</li>
+
+
+
+
+</div>
+
+
+
+</div>
+
+<div class="col-md-12 col-sm-12">
+
+<p>© Copyright @php echo date('Y'); @endphp tgcindia.com | All rights reserved.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="bottom_fix">
+
+<div class="container">
+
+<div class="d-flex" style="display:flex;">
+
+<div class="fixed">
+
+<span data-toggle="modal" data-target="#demo_pop"> <img src="{{ url('assets/front/') }}/img/icon/play.png"  alt="Play" loading="lazy"> Book A Free Demo </span>
+
+</div>
+
+
+
+
+
+<div class="fixed tfl">
+
+<a href="tel:18001020418">
+
+<img src="{{ url('assets/front/') }}/img/icon/mobile.png" alt="phone" loading="lazy">18001020418</a>
+
+</div>
+
+
+
+<div class="fixed">
+
+<a data-toggle="modal" data-target="#demo_pop1"><img src="{{ url('assets/front/') }}/img/icon/brief.png"  alt="Apply Now" loading="lazy"> Apply Now</a>
+
+</div>
+
+
+
+<div class="fixed">
+
+<a data-toggle="modal" data-target="#demo_pop2"><img src="{{ url('assets/front/') }}/img/icon/brief.png"  alt="brief" loading="lazy"> Enroll Now</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="whatsapp comon_icon">
+
+<a href="https://api.whatsapp.com/send?phone=919582786407&amp;text=Hello" target="_blank">
+
+<img src="{{ url('assets/front/') }}/img/svg/whatsapp.svg"  alt="whatsapp" loading="lazy"></a>
+
+</div>
+
+
+
+
+<!--<script src="{{ url('assets/front/') }}/js/jquery-2.2.4.min.js"></script>-->
+
+
+
+
+<!-- jQuery CDN -->
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> ---->
+<!-- <script defer src="{{ url('assets/front/') }}/js/jquery-3.6.0.min-new.js"></script> --->
+
+
+<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.nocaptcha.sitekey') }}" defer></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    function runRecaptcha() {
+        if (typeof grecaptcha !== "undefined") {
+
+            grecaptcha.ready(function () {
+                grecaptcha.execute('{{ config('services.nocaptcha.sitekey') }}', { action: 'submit' })
+                    .then(function (token) {
+                        document.querySelectorAll('.recaptcha_token').forEach(function(el) {
+                            el.value = token;
+                        });
+                    });
+            });
+
+        } else {
+            setTimeout(runRecaptcha, 300); // retry until loaded
+        }
+    }
+
+    runRecaptcha();
+});
+</script>
+
+
+@php
+///echo "Courses TGC New ". request()->segment(1);
+if (Request::path() == '/'){
+$getdata=DB::table('tbl_schema')->where('page_name', 'home')->first();
+  @endphp
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TGC India",
+  "url": "https://www.tgcindia.com",
+  "logo": "https://www.tgcindia.com/assets/front/img/logo-tgc.png",
+  "sameAs": [
+    "https://www.facebook.com/tgcindia",
+    "https://www.instagram.com/tgcindia",
+    "https://www.linkedin.com/company/tgc-india"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-9582786407",
+    "contactType": "customer service",
+    "areaServed": "IN",
+    "availableLanguage": ["English", "Hindi"]
+  }
+}
+</script>
+
+
+  
+  
+@php  
+} elseif(request()->segment(1)=='course') { @endphp
+
+@php
+$slug = request()->segment(2); // get 'adv-certification-course-in-ux-designing'
+$course = \App\Models\Course::where('slug', $slug)->first();
+
+if ($course) {
+    echo '<script type="application/ld+json">';
+    echo json_encode([
+        "@context" => "https://schema.org",
+        "@type" => "Course",
+        "name" => $course->name,
+        "description" => $course->meta_description,
+        "url" => url()->current(),
+        "provider" => [
+            "@type" => "EducationalOrganization",
+            "name" => "TGC India",
+            "url" => url('/')
+        ],
+        "aggregateRating" => [
+            "@type" => "AggregateRating",
+            "ratingValue" => (float) $course->reviews,
+            "reviewCount" => (int) $course->no_review
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    echo '</script>';
+}
+
+
+} elseif(request()->segment(1)=='blog-details') { 
+ $slug = request()->segment(2);
+$post = DB::table('tbl_blog')->where('slug', $slug)->first();
+
+@endphp
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {!! json_encode($post->name) !!},
+  "description": {!! json_encode($post->meta_description ?? Str::limit(strip_tags($post->content), 160)) !!},
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ asset('public/uploads/' . ($post->image ?? 'default.jpg')) }}"
+  },
+  "datePublished": "{{ \Carbon\Carbon::parse($post->created_at)->toIso8601String() }}",
+  "dateModified": "{{ \Carbon\Carbon::parse($post->updated_at ?? $post->created_at)->toIso8601String() }}",
+  "author": {
+    "@type": "Person",
+    "name": "TGC INDIA",
+    "url": "{{ url('/about-us') }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "TGC India",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ asset('assets/front/img/logo-tgc.png') }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ url()->current() }}"
+  }
+}
+</script>
+
+
+
+
+@php
+}elseif(request()->segment(1)=='contact-us') { 
+@endphp
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TGC India",
+  "image": "{{ asset('assets/front/img/logo-tgc.png') }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "H-85A, 2nd Floor, South Extension Part-I",
+    "addressLocality": "South Delhi",
+    "addressRegion": "Delhi",
+    "postalCode": "110049",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 28.532166,
+    "longitude": 77.270966
+  },
+  "telephone": "+91-9582786406",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+    ],
+    "opens": "09:00",
+    "closes": "21:00"
+  },
+  "priceRange": "₹2.5L - ₹12.5L"
+}
+</script>
+
+
+@php
+//$getdata=DB::table('tbl_schema')->where('page_name', 'course_details')->first();
+  
+  
+ // echo $getdata->schema_keyword;
+
+}elseif(request()->segment(1)=='courses'){
+$courses=DB::table('tbl_course')->where('staus', 'Active')->where('is_deleted', 0)->get();
+@endphp
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "TGC India Courses",
+  "itemListElement": [
+    @foreach($courses as $index => $course)
+    {
+      "@type": "ListItem",
+      "position": {{ $index + 1 }},
+      "item": {
+        "@type": "Course",
+        "name": {!! json_encode($course->name) !!},
+        "description": {!! json_encode($course->meta_description ?? 'Comprehensive digital marketing course.') !!},
+        "url": {!! json_encode(route('course_details', $course->slug)) !!},
+       "image": {!! json_encode('https://www.tgcindia.com/public/uploads/' . ($course->image ?? '202509251809animation_3938579.png')) !!},
+         "provider": {
+          "@type": "Organization",
+          "name": "TGC India",
+          "sameAs": "https://www.tgcindia.com"
+        }
+      }
+    }@if(!$loop->last),@endif
+    @endforeach
+  ]
+}
+</script>
+
+
+
+@php
+}elseif(request()->segment(1)=='franchise-opportunities-in-india'){
+@endphp
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "TGC India Franchise",
+  "url": "{{ url()->current() }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ url('/franchise-opportunities-in-india') }}?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+@php
+}elseif(request()->segment(1)=='blogs'){
+
+$blogs=DB::table('tbl_blog')->where('staus', 'Active')->where('is_deleted', 0)->get();
+@endphp
+@php
+$schema = [
+    "@context" => "https://schema.org",
+    "@type" => "Blog",
+    "name" => "TGC India Blog",
+    "url" => url('/blogs'),
+    "description" => "Latest articles on design, animation, UI/UX, VFX, and multimedia from TGC India.",
+    "publisher" => [
+        "@type" => "Organization",
+        "name" => "TGC India",
+        "logo" => [
+            "@type" => "ImageObject",
+            "url" => asset('assets/front/img/logo-tgc.png')
+        ]
+    ],
+    "blogPost" => []
+];
+
+foreach ($blogs as $blog) {
+    $schema["blogPost"][] = [
+        "@type" => "BlogPosting",
+        "headline" => $blog->name,
+        "url" => url('/blogs/' . $blog->slug),
+        "mainEntityOfPage" => [
+            "@type" => "WebPage",
+            "@id" => url('/blogs/' . $blog->slug)
+        ],
+        "datePublished" => \Carbon\Carbon::parse($blog->created_at)->toIso8601String(),
+        "dateModified" => \Carbon\Carbon::parse($blog->updated_at ?? $blog->created_at)->toIso8601String(),
+        "author" => [
+            "@type" => "Person",
+            "name" => $blog->added_by ?? 'TGC India Team',
+            "url" => url('/about-us')
+        ],
+        "image" => asset('public/uploads/' . ($blog->image ?? 'default.jpg')),
+        "publisher" => [
+            "@type" => "Organization",
+            "name" => "TGC India",
+            "logo" => [
+                "@type" => "ImageObject",
+                "url" => asset('assets/front/img/logo-tgc.png')
+            ]
+        ]
+    ];
+}
+@endphp
+
+<script type="application/ld+json">
+{!! json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+</script>
+
+
+@php
+}elseif(request()->segment(1)=='frequently-asked-questions.html'){
+$faqs=DB::table('tbl_faq')->where('is_deleted', 0)->get();
+
+@endphp
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    @foreach($faqs as $index => $faq)
+    {
+      "@type": "Question",
+      "name": {!! json_encode($faq->name) !!},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {!! json_encode(strip_tags(preg_replace('/\s*style=("|\')(.*?)("|\')/i', '', $faq->content))) !!}
+      }
+    }@if(!$loop->last),@endif
+    @endforeach
+  ]
+}
+</script>
+
+
+@php
+}elseif(request()->segment(1)=='student-reviews.html'){
+$reviews=DB::table('tbl_reviews')->where('is_deleted', 0)->get();
+$reviewStats = DB::table('tbl_reviews')
+    ->where('is_deleted', 0)
+    ->selectRaw('COUNT(*) as no_reviews, AVG(no_reviews) as average_rating')
+    ->first();
+
+$noReviews = $reviewStats->no_reviews;
+$averageRating = round($reviewStats->average_rating, 1); 
+@endphp
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product", {{-- or "Course", "Service", etc. --}}
+  "name": "TGC India",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ $averageRating }}",
+    "reviewCount": "{{ $noReviews }}"
+  },
+  "review": [
+    @foreach($reviews as $review)
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": {!! json_encode($review->name) !!}
+      },
+      "datePublished": "{{ $review->created_at }}",
+      "reviewBody": {!! json_encode(strip_tags($review->content)) !!},
+      "name": {!! json_encode($review->heading ?? 'Review') !!},
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "{{ ($review->no_reviews)??5 }}",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }@if(!$loop->last),@endif
+    @endforeach
+  ]
+}
+</script>
+
+@php
+}elseif(request()->segment(1)=='gallery'){
+$galleryImages=DB::table('tbl_gallery')->get();
+@endphp
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Gallery",
+  "itemListElement": [
+    @foreach($galleryImages as $index => $image)
+    {
+      "@type": "ImageObject",
+      "position": {{ $index + 1 }},
+      "contentUrl": "{{ asset('public/uploads/' . $image->image) }}",
+      "name": "{{ $image->title }}",
+      "description": "{{ $image->description }}"
+    }@if(!$loop->last),@endif
+    @endforeach
+  ]
+}
+</script>
+
+
+
+@php 
+
+}
+@endphp
+
+<script>
+function toggleDropdown() {
+    var dropdown = document.getElementById('brow_ser_hover');
+    
+    if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+        dropdown.style.display = 'block';  // Open
+    } else {
+        dropdown.style.display = 'none';   // Close
+    }
+}
+</script>
+<script>
+  function copyToClipboard() {
+    const url = document.getElementById('share_url').textContent;
+    navigator.clipboard.writeText(url).then(() => {
+      alert('Link copied to clipboard!');
+    }).catch(err => {
+      alert('Failed to copy the link: ', err);
+    });
+  }
+</script>
+<script>
+  document.getElementById('search_keywords').addEventListener('keyup', function() {
+    let keywords = this.value;
+    let resultDiv = document.querySelector('.show_here');
+
+    // If the search input is empty, hide the div
+    if (keywords.trim() === "") {
+        resultDiv.style.display = 'none'; // Hide the div
+        return; // Stop further execution
+    }
+
+    // If the search input is not empty, show the div
+    resultDiv.style.display = 'block';
+
+    // AJAX Request
+    fetch("{{ url('search-courses') }}?keywords=" + keywords)
+    .then(response => response.json())
+    .then(data => {
+        resultDiv.innerHTML = '';
+
+        if (data.courses.length > 0) {
+            data.courses.forEach(course => {
+                resultDiv.innerHTML += `<a href="{{ url('course/') }}/${course.slug}">${course.name}</a>`;
+            });
+        } else {
+            resultDiv.innerHTML = '<p>No courses found.</p>';
+        }
+    })
+    .catch(error => console.error('Error:', error));
+});
+
+</script>
+
+<script>
+document.querySelector('#mobileSelect').addEventListener('click', function () {
+  this.focus();
+});
+
+if (window.innerWidth <= 768) { // Example for tablets and smaller
+  const selectElement = document.getElementById("mobileSelect");
+  selectElement.classList.remove("custom-select-class"); // Remove any custom classes
+  selectElement.classList.add("form-control"); // Add standard Bootstrap styling
+}
+</script>
+
+<script>
+function showCategoryCourseMenu(categoryId) {
+
+$.ajax({
+url: "{{ url('ajax_get_products') }}",
+method: 'POST',
+dataType: 'html',
+data: {
+'category': categoryId,
+'_token': '{{ csrf_token() }}'
+},
+success: function (response) {
+console.log(response);
+$("#ajax_courses_menu").html(response);
+},
+error: function (error) {
+console.log(error);
+}
+});
+
+}
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.getElementById('nav1');
+    const dropdownMenu = document.getElementById('extra_me1');
+    const dropdownToggle = document.querySelector('.nav-item.dropdown .dropdown-toggl1');
+
+    function adjustMenu() {
+      // Move all items back to main nav
+      while (dropdownMenu.firstChild) {
+        nav.insertBefore(dropdownMenu.firstChild, dropdownToggle.parentNode);
+      }
+
+      // Check if there's overflow
+      let navWidth = nav.clientWidth;
+      let itemsWidth = Array.from(nav.children).reduce((acc, item) => acc + item.clientWidth, 0);
+
+      // Move items to dropdown until there's no overflow
+      if (itemsWidth > navWidth) {
+        for (let i = nav.children.length - 2; i >= 0; i--) {
+          const item = nav.children[i];
+          itemsWidth -= item.clientWidth;
+          dropdownMenu.insertBefore(item, dropdownMenu.firstChild);
+          if (itemsWidth <= navWidth) break;
+        }
+      }
+
+      // Show or hide the dropdown toggle based on whether there are items in the dropdown
+      dropdownToggle.style.display = dropdownMenu.children.length > 0 ? 'block' : 'none';
+    }
+
+    // Initial check
+    adjustMenu();
+
+    // Adjust on window resize
+    window.addEventListener('resize', adjustMenu);
+
+    // Toggle dropdown on click
+    dropdownToggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      dropdownMenu.classList.toggle('show');
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', () => {
+      dropdownMenu.classList.remove('show');
+    });
+
+    // Prevent closing when clicking inside dropdown
+    dropdownMenu.addEventListener('click', (event) => {
+      event.stopPropagation();
+    });
+  });
+</script>
+
+<script>
+document.addEventListener('click', function (event) {
+    // Check if the click happened outside the .ser_wrap
+    const searchWrapper = document.querySelector('.ser_wrap');
+    const showHere = document.querySelector('.show_here');
+
+    if (!searchWrapper.contains(event.target)) {
+        // Hide the show_here element
+        showHere.style.display = 'none';
+    }
+});
+</script>
+
+
+<script>
+  
+    // ✅ Laravel se category aur courses ka data le lo
+let allCourses = {
+    @foreach(DB::table('tbl_course_category')->where('is_deleted', 0)->where('staus', 'Active')->orderBy('orders_by', 'ASC')->get() as $category)
+        "{{$category->id}}": [
+            @foreach(DB::table('tbl_course')->where('parent', $category->id)->where('is_deleted', 0)->whereNull('excluded_by')->where('staus', 'Active')->orderBy('id', 'DESC')->get() as $course)
+                { id: "{{$course->id}}", name: "{{$course->name}}", slug: "{{$course->slug}}" },
+            @endforeach
+        ],
+    @endforeach
+};
+
+// ✅ Laravel se master program ka data le lo
+let masterPrograms = {!! json_encode(
+    DB::table('tbl_course_category')
+        ->where('is_deleted', 0)
+        ->where('staus', 'Active')
+        ->orderBy('orders_by', 'ASC')
+        ->get()
+        ->keyBy('id')
+) !!};
+
+// ✅ Function jo dono kaam karega (Courses & Master Program Update)
+function showCategoryCourseMenu(categoryId) {
+    // 🔹 Step 1: Course List Update Karo
+    let courseList = document.getElementById('ajax_courses_menu');
+    courseList.innerHTML = ''; // Pehle list ko clear karo
+
+    let courses = allCourses[categoryId] || [];
+    if (courses.length > 0) {
+        courses.forEach(course => {
+            let listItem = document.createElement('li');
+            let link = document.createElement('a');
+            link.href = `{{ url('course') }}/${course.slug}`;
+            link.textContent = course.name;
+            listItem.appendChild(link);
+            courseList.appendChild(listItem);
+        });
+    } else {
+        courseList.innerHTML = '<li>No courses found</li>';
+    }
+
+    // 🔹 Step 2: Master Program Update Karo (Agar data available hai tabhi update karo)
+    if (masterPrograms[categoryId]) {
+        document.getElementById('master-image').src = "{{ url('public/uploads') }}/" + masterPrograms[categoryId].masterimage;
+        document.getElementById('master-title').innerText = masterPrograms[categoryId].mastertitle;
+        document.getElementById('master-content').innerHTML = masterPrograms[categoryId].mastercontent;
+    }
+
+    // 🔹 Step 3: Active Button Set Karo
+    document.querySelectorAll('.cortablinks').forEach(button => button.classList.remove('active'));
+    let activeButton = document.querySelector(`button[onclick="showCategoryCourseMenu('${categoryId}')"]`);
+    if (activeButton) activeButton.classList.add('active');
+}
+
+// ✅ Pehli category ko page load hone par select karo (Courses + Master Program)
+document.addEventListener("DOMContentLoaded", function () {
+    let firstCategoryId = "{{ $firstCategory->id ?? '' }}"; // Pehli category ka ID le lo
+    if (firstCategoryId) {
+        setTimeout(() => {
+            showCategoryCourseMenu(firstCategoryId); // Pehli category ko active kar do
+        }, 100); // Thoda delay dena taki DOM completely load ho
+    }
+});
+
+     
+</script>
+
+<script>
+
+/*---------------------end counter-----------------------*/
+function updateTimernn() {
+    // Local storage check: Agar pehle se future date set hai toh use karo, warna 2 din aage ka set karo
+    let future = localStorage.getItem("futureTime");
+
+    if (!future || new Date().getTime() > future) {
+        future = new Date().getTime() + (2 * 24 * 60 * 60 * 1000); // Ab se 2 din baad ka time
+        localStorage.setItem("futureTime", future); // Future time save karo
+    }
+
+    let now = new Date().getTime();
+    let diff = future - now;
+
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    let secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("end_timersnn").innerHTML =
+        '<div>&nbsp;' + days + 'd <span>: </span></div>' +
+        '<div>' + hours + 'h <span>: </span></div>' +
+        '<div>' + mins + 'm <span>: </span></div>' +
+        '<div>' + secs + 's <span></span>  <span class="modalopen ttd" data-toggle="modal" data-target="#offer_av" style="background:black;">GRAB NOW</span></div>';
+}
+
+// Har second update karega
+setInterval(updateTimernn, 1000);
+
+// Page load hone par ek baar turant update kare
+updateTimernn();
+
+
+
+
+
+</script>
+
