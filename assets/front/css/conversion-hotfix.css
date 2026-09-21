@@ -1,5 +1,15 @@
 /* Conversion hotfix layer: keep Blade layout intact while reducing mobile CTA/form blockers. */
 
+#hid,
+#g.modal.pop_view,
+#g.modal.fade.in.pop_view,
+.transparent-layer {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
 body.tgc-hotfix-suppress-auto-popups #hid,
 body.tgc-hotfix-suppress-auto-popups .popup-box.new-class,
 body.tgc-hotfix-suppress-auto-popups .modal.fade.in.pop_view,
