@@ -1,0 +1,79 @@
+/* Conversion hotfix layer: keep Blade layout intact while reducing mobile CTA/form blockers. */
+
+body.tgc-hotfix-suppress-auto-popups #hid,
+body.tgc-hotfix-suppress-auto-popups .popup-box.new-class,
+body.tgc-hotfix-suppress-auto-popups .modal.fade.in.pop_view,
+body.tgc-hotfix-suppress-auto-popups .modal.pop_view.in,
+body.tgc-hotfix-suppress-auto-popups .transparent-layer {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+body.tgc-hotfix-suppress-auto-popups {
+    overflow: auto !important;
+    padding-right: 0 !important;
+}
+
+.modal-backdrop {
+    pointer-events: none;
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 58px;
+    }
+
+    #fix-rig,
+    #mySidepanel,
+    .duq_DUQ_container__1Uh0K,
+    .duq_DUQ_container_color__2cEYj {
+        display: none !important;
+        pointer-events: none !important;
+    }
+
+    .bottom_fix {
+        z-index: 9998 !important;
+        height: 52px !important;
+        min-height: 52px !important;
+        display: flex !important;
+        align-items: stretch !important;
+        justify-content: space-around !important;
+        overflow: hidden !important;
+    }
+
+    .bottom_fix a,
+    .bottom_fix button {
+        min-height: 48px !important;
+        line-height: 1.15 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        white-space: normal !important;
+        text-align: center !important;
+        touch-action: manipulation;
+    }
+
+    .whatsapp.comon_icon {
+        z-index: 9997 !important;
+        left: 12px !important;
+        bottom: 66px !important;
+        top: auto !important;
+    }
+
+    .grecaptcha-badge {
+        transform: scale(.75);
+        transform-origin: bottom right;
+        right: 0 !important;
+        bottom: 58px !important;
+        z-index: 9996 !important;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        touch-action: manipulation;
+    }
+}

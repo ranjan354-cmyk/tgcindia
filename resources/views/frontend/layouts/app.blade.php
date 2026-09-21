@@ -97,6 +97,8 @@ $urlWithoutParams .= isset($parsedUrl['path']) ? $parsedUrl['path'] : '';
 
      <link rel="preload" href="{{ url('assets/front/') }}/css/colors/theme-skin-color-set-1.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link href="{{ url('assets/front/') }}/css/colors/theme-skin-color-set-1.css" rel="stylesheet"></noscript>
 
+   <link href="{{ url('assets/front/') }}/css/conversion-hotfix.css?v=20260920" rel="stylesheet" type="text/css">
+
    
    
 <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -165,6 +167,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
 
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script> --->
+
+    <script src="{{ url('assets/front/') }}/js/conversion-hotfix.js?v=20260920" defer></script>
 
 
 
@@ -318,6 +322,10 @@ setInterval('updateTimer()', 1000);
         const nav = document.getElementById('nav');
         const dropdownMenu = document.getElementById('extra_me');
         const dropdownToggle = document.querySelector('.nav-item.dropdown .dropdown-toggl');
+
+        if (!nav || !dropdownMenu || !dropdownToggle) {
+            return;
+        }
 
         function adjustMenu() {
             // Move all items back to main nav
