@@ -8,7 +8,6 @@
     action="{{ url('/indexAbout') }}"
     data-recaptcha-form
     data-recaptcha-site-key="{{ config('services.nocaptcha.sitekey') }}"
-    novalidate
 >
     @csrf
     <input type="hidden" name="recaptcha_token" value="" data-recaptcha-token>
@@ -54,7 +53,7 @@
             <select id="{{ $formId }}-subject" name="subject_aboutenquiry" required aria-describedby="{{ $errors->has('subject_aboutenquiry') ? $formId.'-subject-error' : '' }}">
                 <option value="">Select one</option>
                 @foreach (['Career counselling', 'Course selection', 'Fees and batches', 'Centre visit'] as $subject)
-                    <option value="{{ $subject }}" @selected(old('subject_aboutenquiry') === $subject)>{{ $subject }}</option>
+                    <option value="{{ $subject }}" {{ old('subject_aboutenquiry') === $subject ? 'selected' : '' }}>{{ $subject }}</option>
                 @endforeach
             </select>
             @error('subject_aboutenquiry')<p class="tgc-field-error" id="{{ $formId }}-subject-error">{{ $message }}</p>@enderror
