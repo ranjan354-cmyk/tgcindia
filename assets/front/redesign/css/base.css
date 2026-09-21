@@ -1,0 +1,106 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--tgc-header-height) + 1rem);
+}
+
+body.tgc-redesign {
+    margin: 0;
+    color: var(--tgc-ink);
+    background: var(--tgc-surface);
+    font-family: var(--tgc-font-body);
+    font-size: var(--tgc-text-base);
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body.tgc-redesign.tgc-menu-open { overflow: hidden; }
+
+.tgc-redesign img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.tgc-redesign a { color: inherit; }
+
+.tgc-redesign button,
+.tgc-redesign input,
+.tgc-redesign select,
+.tgc-redesign textarea { font: inherit; }
+
+.tgc-redesign h1,
+.tgc-redesign h2,
+.tgc-redesign h3,
+.tgc-redesign p { margin-top: 0; }
+
+.tgc-redesign h1,
+.tgc-redesign h2,
+.tgc-redesign h3 {
+    font-family: var(--tgc-font-display);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.tgc-redesign h1 { font-size: var(--tgc-text-display); }
+.tgc-redesign h2 { font-size: var(--tgc-text-h2); }
+.tgc-redesign h3 { font-size: var(--tgc-text-h3); }
+
+.tgc-redesign :focus-visible {
+    outline: 3px solid var(--tgc-focus);
+    outline-offset: 3px;
+}
+
+.tgc-skip-link {
+    position: fixed;
+    z-index: 9999;
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    background: var(--tgc-ink);
+    transform: translateY(-160%);
+    transition: transform 180ms ease;
+}
+
+.tgc-skip-link:focus { transform: translateY(0); }
+
+.tgc-container {
+    width: min(calc(100% - 2rem), var(--tgc-container));
+    margin-inline: auto;
+}
+
+.tgc-section {
+    padding-block: clamp(4.5rem, 8vw, var(--tgc-space-10));
+}
+
+.tgc-section--soft { background: var(--tgc-surface-soft); }
+.tgc-section--ink { color: #fff; background: var(--tgc-navy); }
+
+.tgc-eyebrow {
+    margin-bottom: var(--tgc-space-4);
+    color: var(--tgc-blue);
+    font-size: var(--tgc-text-xs);
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.tgc-section--ink .tgc-eyebrow { color: var(--tgc-lime); }
+
+@media (min-width: 48rem) {
+    .tgc-container { width: min(calc(100% - 4rem), var(--tgc-container)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

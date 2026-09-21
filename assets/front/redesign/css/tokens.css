@@ -1,0 +1,47 @@
+:root {
+    --tgc-ink: #101828;
+    --tgc-ink-soft: #344054;
+    --tgc-muted: #667085;
+    --tgc-line: #dfe4ea;
+    --tgc-surface: #ffffff;
+    --tgc-surface-soft: #f5f7fb;
+    --tgc-navy: #111c3b;
+    --tgc-blue: #3157e8;
+    --tgc-blue-dark: #2443bb;
+    --tgc-coral: #f45d4c;
+    --tgc-lime: #c8f169;
+    --tgc-focus: #f79009;
+    --tgc-success: #087443;
+    --tgc-danger: #b42318;
+
+    --tgc-font-display: "Manrope", "Segoe UI", sans-serif;
+    --tgc-font-body: "Inter", "Segoe UI", sans-serif;
+
+    --tgc-text-xs: 0.75rem;
+    --tgc-text-sm: 0.875rem;
+    --tgc-text-base: 1rem;
+    --tgc-text-lg: clamp(1.05rem, 1vw + 0.7rem, 1.25rem);
+    --tgc-text-h3: clamp(1.25rem, 1.5vw, 1.55rem);
+    --tgc-text-h2: clamp(2rem, 4.2vw, 3.75rem);
+    --tgc-text-display: clamp(2.65rem, 6.5vw, 5.7rem);
+
+    --tgc-space-1: 0.25rem;
+    --tgc-space-2: 0.5rem;
+    --tgc-space-3: 0.75rem;
+    --tgc-space-4: 1rem;
+    --tgc-space-5: 1.5rem;
+    --tgc-space-6: 2rem;
+    --tgc-space-7: 3rem;
+    --tgc-space-8: 4rem;
+    --tgc-space-9: 6rem;
+    --tgc-space-10: 8rem;
+
+    --tgc-radius-sm: 0.75rem;
+    --tgc-radius-md: 1.25rem;
+    --tgc-radius-lg: 2rem;
+    --tgc-shadow-sm: 0 10px 30px rgba(16, 24, 40, 0.08);
+    --tgc-shadow-lg: 0 24px 80px rgba(16, 24, 40, 0.14);
+    --tgc-container: 76rem;
+    --tgc-header-height: 5rem;
+    --tgc-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
